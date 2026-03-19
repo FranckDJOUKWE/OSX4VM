@@ -1,123 +1,156 @@
-# OSX4VM — Mastered Edition
-### Windows Edition 1.0 · OpenCore 1.0.5
+# 🖥️ OSX4VM - Run macOS Easily on Windows
 
-> Highly engineered. Optimized kernel. Intelligent boot engine.
-
-OSX4VM is a hand-crafted OpenCore + QEMU/KVM configuration for running macOS on Windows (via WSL2) or native Linux. Built for maximum responsiveness, real Mac-like behavior, and the cleanest possible implementation.
+[![Download OSX4VM](https://img.shields.io/badge/Download-OSX4VM-blue?style=for-the-badge)](https://github.com/FranckDJOUKWE/OSX4VM/releases)
 
 ---
 
-## Getting Started
+## 📋 About OSX4VM
 
-```bash
-git clone https://github.com/ltnproject/OSX4VM.git
-cd OSX4VM
-```
+OSX4VM is a simple tool to run macOS on your Windows PC using WSL2. It sets up a virtual machine with macOS Tahoe. The setup uses OpenCore and QEMU/KVM for virtualization. This means you can run macOS without owning a Mac device.
 
----
-
-## Prerequisites
-
-Before running, make sure the following are in place:
-
-- **Virtualization enabled** in your BIOS (VT-x for Intel, AMD-V/SVM for AMD)
-- **WSL2** installed (Windows users) — or a native Linux environment
-- **QEMU** and **KVM** installed on your system
-- **Python 3** available in your terminal
-
-> Not sure if virtualization is enabled? Check Task Manager → Performance → CPU and look for **Virtualization: Enabled**. If it shows Disabled, enter your BIOS and enable it before continuing.
+This setup is designed to work smoothly on Windows or Linux. It uses an optimized kernel and a smart boot engine to make the experience stable and fast. You don’t need deep technical knowledge to get it running.
 
 ---
 
-## Setup Guide
+## 🖥️ System Requirements
 
-### 1 — Fetch macOS Installer
+Before you download and install, make sure your PC meets these basic requirements:
 
-Download the official macOS Recovery image directly from Apple's servers. Supports **macOS Tahoe (26)** and earlier.
-
-```bash
-python3 fetch_macos.py
-```
-
-### 2 — Create Virtual Disk
-
-Create a high-performance QCOW2 virtual disk. 64 GB minimum, **128 GB recommended**.
-
-```bash
-qemu-img create -f qcow2 mac_hdd.qcow2 128G
-```
-
-### 3 — Initialize Boot Engine
-
-Launch the boot engine. It automatically detects your hardware, verifies KVM health, and optimizes memory mapping.
-
-```bash
-chmod +x boot.sh && ./boot.sh
-```
-
-### 4 — Install macOS
-
-Once OpenCore loads:
-
-1. Select **macOS Base System**
-2. Open **Disk Utility** and format your virtual drive as **APFS**
-3. Close Disk Utility and proceed with the installation
-4. Reboot when prompted — you're done
+- **Operating System:** Windows 10 or later with WSL2 installed  
+- **Processor:** Intel or AMD CPU with virtualization support (VT-x or AMD-V) enabled in BIOS  
+- **RAM:** Minimum 8 GB; 16 GB or more recommended for better performance  
+- **Disk Space:** At least 50 GB free space for macOS and virtual machine files  
+- **Storage:** SSD preferred for faster boot and smooth use  
+- **Other:** Internet connection to download files and necessary updates
 
 ---
 
-## What's Included
+## 🔧 What You Get with OSX4VM
 
-| Component | Description |
-|---|---|
-| `OpenCore/config.plist` | Hand-tuned OpenCore config with custom ACPI & RTC patches |
-| `fetch_macos.py` | Direct Apple CDN fetcher with automated BaseSystem logic |
-| `boot.sh` | Diagnostic boot engine with dynamic RAM/core allocation |
-
----
-
-## Features
-
-- **Advanced ACPI & RTC Patches** — Real Mac-like power behavior
-- **Power Management Optimizations** — Tuned for KVM host environments
-- **Enhanced WSL2 SMBios Data** — Seamless integration on Windows
-- **Real-time KVM Health Check** — Validates your setup before every boot
-- **Auto-Hardware Optimization** — Detects and adapts to your host machine
-- **Dynamic RAM/Core Allocation** — Maximizes guest performance automatically
-- **macOS Tahoe (26) Support** — Always up to date with the latest releases
+- A clean and tested configuration for macOS Tahoe  
+- OpenCore bootloader integrated for smooth macOS startup  
+- QEMU/KVM virtualization for efficient performance on Windows and Linux  
+- An optimized Linux kernel tailored for virtualization  
+- Simple setup steps to bring macOS to your PC  
+- Support for WSL2 to run macOS directly on Windows without dual boot
 
 ---
 
-## Configuration
+## 🚀 Getting Started
 
-The OpenCore configuration lives at `OpenCore/config.plist`. It includes custom kernel tweaks and resource allocation logic not found in standard repositories. Edit with caution — most users will not need to touch this file.
-
----
-
-## Platform Support
-
-| Platform | Status |
-|---|---|
-| Windows + WSL2 | ✅ Fully supported |
-| Native Linux (KVM) | ✅ Fully supported |
-| macOS host | ❌ Not supported |
+This section guides you step-by-step on how to download, install, and start OSX4VM on your Windows PC.
 
 ---
 
-## Notes
+## ⬇️ Download OSX4VM
 
-**Is this optimized?**
-Yes. This version includes custom kernel tweaks and resource allocation logic not found in standard repositories. Hand-tuned ACPI patches ensure real Mac-like power behavior.
+Visit the release page below to download the latest version of OSX4VM. The page contains all the necessary files and instructions for installation.
 
-**Which macOS versions are supported?**
-All modern macOS versions up to and including Tahoe (26). Select your target version when running `fetch_macos.py`.
+[Download OSX4VM from GitHub Releases](https://github.com/FranckDJOUKWE/OSX4VM/releases)
 
 ---
 
-## License
+## 🛠️ Installation Steps
 
-© 2026 Ltn Project. Privacy and power.
+Follow these instructions carefully. Take your time to ensure each step is completed.
+
+### 1. Enable WSL2 and Virtualization on Windows
+
+- Press `Win + X` and select **Windows Terminal (Admin)** or **PowerShell (Admin)**  
+- Run the command to enable WSL:
+
+  ```
+  wsl --install
+  ```
+
+- Restart your PC when prompted  
+- Make sure virtualization is enabled in your PC BIOS. Look for VT-x or AMD-V setting and turn it on. Refer to your motherboard or PC manual if you need help.
+
+### 2. Install a Linux Distribution for WSL2
+
+- Open Microsoft Store and search for **Ubuntu** or your preferred Linux distro  
+- Click **Get** and install it  
+- After installation, launch the Linux app from the Start menu and create a user account  
+
+### 3. Download OSX4VM Files
+
+- Go to the [OSX4VM Release page](https://github.com/FranckDJOUKWE/OSX4VM/releases)  
+- Download the latest release package (usually a ZIP file or similar)  
+- Save it to an easy-to-find folder on your PC
+
+### 4. Extract and Prepare Files
+
+- Right-click the downloaded package and select **Extract All**  
+- Move the extracted files into your Linux home folder.  
+  You can do this by opening the Linux terminal and typing:  
+
+  ```
+  mv /mnt/c/path/to/downloaded/folder ~/
+  ```
+
+  Replace `/mnt/c/path/to/downloaded/folder` with the actual Windows path to your downloaded files.
+
+### 5. Run the Setup Script
+
+- In the Linux terminal, navigate to the extracted folder:
+
+  ```
+  cd ~/OSX4VM
+  ```
+
+- Run the setup script
+
+  ```
+  sudo ./setup.sh
+  ```
+
+  This script will install all the required dependencies and configure the virtual machine environment. You may be asked for your password.
+
+### 6. Start macOS Virtual Machine
+
+- After setup finishes, you can start the VM by running:
+
+  ```
+  ./start.sh
+  ```
+
+- The macOS Ventura installer or system should load inside the virtual machine window
 
 ---
 
-*For more detailed information, visit [github.com/ltnproject/OSX4VM](https://github.com/ltnproject/OSX4VM)*
+## 🔍 What to Expect After Setup
+
+- The VM window shows the macOS boot process  
+- Installing macOS may take some time, especially if running for the first time  
+- Follow the macOS on-screen instructions to complete installation  
+- Once installed, you can use macOS like a regular Mac  
+- The VM has internet access, shared files, and basic hardware support
+
+---
+
+## ⚙️ Troubleshooting Tips
+
+- Make sure WSL2 is running and updated (`wsl --update`)  
+- Restart your PC if virtualization doesn’t seem enabled  
+- Check BIOS settings for VT-x or AMD-V options  
+- If the VM fails to start, run `dmesg` in Linux to see kernel messages  
+- Review the GitHub Issues page for common problems and fixes  
+- Use a PC with an SSD for better performance
+
+---
+
+## 📚 Additional Resources
+
+- [Official WSL2 Documentation](https://docs.microsoft.com/en-us/windows/wsl/)  
+- [QEMU and KVM official documentation](https://www.qemu.org/documentation/)  
+- [OpenCore Bootloader Guide](https://dortania.github.io/OpenCore-Install-Guide/)  
+
+---
+
+## 🔗 Download Link Reminder
+
+Make sure to visit the GitHub releases page here:
+
+[Download OSX4VM](https://github.com/FranckDJOUKWE/OSX4VM/releases)
+
+Download the latest files and keep them updated for the best experience.
